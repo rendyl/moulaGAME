@@ -197,6 +197,7 @@ public class PlayerController : MonoBehaviour
             if(Input.mouseScrollDelta.y != 0)
             {
                 bool actualState = myGun.isFiring;
+                myGun.timeBetweenShots = myGun.baseTimeBetweenShots;
                 myGun.isFiring = false;
                 gunList[indexActive].gameObject.SetActive(false);
                 indexActive = (indexActive + (int)Input.mouseScrollDelta.y) % (int)gunList.Count;
@@ -205,6 +206,7 @@ public class PlayerController : MonoBehaviour
                 myGun = gunList[indexActive];
                 weaponText.SetText(myGun.weaponName);
                 myGun.isFiring = actualState;
+                if(timeBonusFR < timeMaxBonusFR) myGun.timeBetweenShots /= 2;
             }
 
             if(myGun.shootingType == "semiAuto")
