@@ -5,6 +5,9 @@ using UnityEngine;
 public class ZombieFactoryController : MonoBehaviour
 {
     public GameObject zombiePrefab;
+    public GameObject zombieBIGPrefab;
+    public GameObject zombieRICHPrefab;
+
     public float reloadTime = 2f;
     public float reloadProgress = 0f;
     public int nbMaxZombies = 20;
@@ -35,7 +38,12 @@ public class ZombieFactoryController : MonoBehaviour
         {
             if(listZombies.Count < nbMaxZombies)
             {
-                GameObject zombie = Instantiate<GameObject>(zombiePrefab, new Vector3(Random.Range(-10, 10), 1, Random.Range(5, 10)), Quaternion.identity);
+                int dice = Random.Range(0, 101);
+                GameObject zombie;
+                if(dice < 85) zombie = Instantiate<GameObject>(zombiePrefab, new Vector3(Random.Range(-10, 10), 1, Random.Range(5, 10)), Quaternion.identity);
+                else if(85 <= dice && dice < 95) zombie = Instantiate<GameObject>(zombieBIGPrefab, new Vector3(Random.Range(-10, 10), 1.5f, Random.Range(5, 10)), Quaternion.identity);
+                else zombie = Instantiate<GameObject>(zombieRICHPrefab, new Vector3(Random.Range(-10, 10), 1.2f, Random.Range(5, 10)), Quaternion.identity);
+                
                 zombie.transform.parent = gameObject.transform;
                 listZombies.Add(zombie);
                 reloadProgress = 0;

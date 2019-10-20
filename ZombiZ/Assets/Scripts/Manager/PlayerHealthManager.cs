@@ -8,13 +8,23 @@ public class PlayerHealthManager : MonoBehaviour
 {
     public int maxHealth;
     private int currentHealth;
+
     public TextMeshProUGUI hpText;
+    public TextMeshProUGUI gameOVER;
+
+    public ParticleSystem dmgParticles;
+    public AudioSource dmgSound;
+    public AudioSource deathSound;
 
     // Start is called before the first frame update
     void Start()
     {
+        deathSound.Stop();
+        dmgSound.Stop();
+        dmgParticles.Stop();
         currentHealth = maxHealth;
         setHPText();
+        gameOVER.SetText("");
     }
 
     void setHPText()
@@ -40,13 +50,20 @@ public class PlayerHealthManager : MonoBehaviour
 
     public void hurtPlayer(int damage)
     {
-        currentHealth -= damage;
-        if (currentHealth <= 0)
+        if(currentHealth > 0)
         {
-            currentHealth = 0;
-            gameObject.GetComponent<PlayerController>().alive = false;
-            gameObject.GetComponent<PlayerController>().myGun.isFiring = false;
+            dmgSound.Play();
+            dmgParticles.Play();
+            currentHealth -= damage;
+            if (currentHealth <= 0)
+            {
+                deathSound.Play();
+                gameOVER.SetText("GAME OVER");
+                currentHealth = 0;
+                gameObject.GetComponent<PlayerController>().alive = false;
+                gameObject.GetComponent<PlayerController>().myGun.isFiring = false;
+            }
+            setHPText();
         }
-        setHPText();
     }
 }

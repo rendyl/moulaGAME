@@ -6,7 +6,9 @@ public class EnemyHealthManager : MonoBehaviour
 {
     public float timeBeforeDeath = 1f;
     public float timeToDie = 0f;
+    public float timePartPlay = 5f;
     public int maxHealth;
+    public int killValue;
     public int currentHealth;
     bool rotated = false;
     public PlayerController playerToChase;
@@ -23,37 +25,47 @@ public class EnemyHealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
+        timePartPlay += Time.deltaTime;
+        if(timePartPlay > timeBeforeDeath && timeToDie <= 0)
+        {
+            ps.Stop();
+        }
+        
         if(timeToDie > 0 && !rotated)
         {
             rotated = true;
+            playerToChase.kills += killValue;
             transform.Rotate(0, 0, 90);
         }
 
         if(timeBeforeDeath < timeToDie)
         {
             ps.Stop();
-            gameObject.GetComponentInParent<ZombieFactoryController>().removeFromList(gameObject);
-            playerToChase.kills++;
+            gameObject.GetComponentInParent<ZombieFactoryController>().removeFromList(gameObject);      
             Destroy(gameObject);
         }
 
-        if (currentHealth <= 0)
+        if(currentHealth <= 0)
         {
-            gameObject.GetComponent<CapsuleCollider>().isTrigger = true;
-            gameObject.GetComponent<EnemyController>().alive = false;
             timeToDie += Time.deltaTime;
-            // TO DO DEATH ANIMATION   
+            gameObject.GetComponent<CapsuleCollider>().isTrigger = true;
+            gameObject.GetComponent<EnemyController>().alive = false; 
         }
+
+        
     }
 
     public void hurtEnemy(int damage, Vector3 pointHit)
     {
-        ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
-        ps.transform.position = pointHit;
-        ps.Play();
-
-        currentHealth -= damage;
+        if(currentHealth > 0)
+        {
+            ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
+            playerToChase.kills += 0.2f;
+            ps.transform.position = pointHit;
+            ps.Play();
+            timePartPlay = 0f;
+            currentHealth -= damage;
+        } 
     }
 }

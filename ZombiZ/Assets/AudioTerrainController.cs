@@ -38,7 +38,7 @@ public class AudioTerrainController : MonoBehaviour
         else
         {
             timeBeforeMute = 0f;
-            mySource.volume = Mathf.Lerp(mySource.volume, 0.2f, Time.deltaTime * 5);
+            mySource.volume = Mathf.Lerp(mySource.volume, 0.1f, Time.deltaTime * 5);
         }
     }
 }

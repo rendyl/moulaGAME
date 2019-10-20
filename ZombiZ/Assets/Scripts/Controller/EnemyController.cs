@@ -296,7 +296,7 @@ public class EnemyController : MonoBehaviour
             }
             else
             {
-                other.gameObject.GetComponent<PlayerHealthManager>().hurtPlayer(dmg);
+                other.gameObject.GetComponent<PlayerHealthManager>().hurtPlayer(dmg);   
             }
         }
     }

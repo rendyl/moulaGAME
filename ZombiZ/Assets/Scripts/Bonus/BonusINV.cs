@@ -6,6 +6,6 @@ public class BonusINV : Bonus
 {
     public override void activateBonus()
     {
-        player.GetComponent<PlayerController>().invincible(5f);
+        player.GetComponent<PlayerController>().invincible(30.5f);
     }
 }

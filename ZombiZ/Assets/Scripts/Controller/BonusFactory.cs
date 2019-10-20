@@ -8,6 +8,7 @@ public class BonusFactory : MonoBehaviour
     public GameObject bonusMSPrefab;
     public GameObject bonusINVPrefab;
     public GameObject bonusFRPrefab;
+    public GameObject bonusNUKEPrefab;
     public float reloadTime = 2f;
     public float reloadProgress = 0f;
     public int nbMaxBonus = 1;
@@ -32,19 +33,23 @@ public class BonusFactory : MonoBehaviour
         {
             if (listBonus.Count < nbMaxBonus)
             {
-                int dice = Random.Range(0, 11);
+                int dice = Random.Range(0, 105);
                 GameObject gameObjectToInstantiate;
-                if (dice <= 2)
+                if (dice < 33)
                 {
                     gameObjectToInstantiate = bonusMSPrefab;
                 }
-                else if (3 <= dice && dice <= 5)
+                else if (33 <= dice && dice < 66)
                 {
                     gameObjectToInstantiate = bonusHPPrefab;
                 }
-                else if (6 <= dice && dice <= 8)
+                else if (66 < dice && dice <= 99)
                 {
                     gameObjectToInstantiate = bonusFRPrefab;
+                }
+                else if (99 < dice && dice <= 102)
+                {
+                    gameObjectToInstantiate = bonusNUKEPrefab;
                 }
                 else
                 {
