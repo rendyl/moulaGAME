@@ -25,8 +25,36 @@ public class BonusFactory : MonoBehaviour
         listBonus.Remove(go);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void spawnBonusAtPosition(Vector3 position)
+    {
+        int dice = Random.Range(0, 105);
+        GameObject gameObjectToInstantiate;
+        if (dice < 33)
+        {
+            gameObjectToInstantiate = bonusMSPrefab;
+        }
+        else if (33 <= dice && dice < 66)
+        {
+            gameObjectToInstantiate = bonusHPPrefab;
+        }
+        else if (66 < dice && dice <= 99)
+        {
+            gameObjectToInstantiate = bonusFRPrefab;
+        }
+        else if (99 < dice && dice <= 102)
+        {
+            gameObjectToInstantiate = bonusNUKEPrefab;
+        }
+        else
+        {
+            gameObjectToInstantiate = bonusINVPrefab;
+        }
+        GameObject bonus = Instantiate<GameObject>(gameObjectToInstantiate, position, Quaternion.identity);
+        bonus.transform.parent = gameObject.transform;
+        listBonus.Add(bonus);
+    }
+
+    public void spawnBonusWithCD()
     {
         reloadProgress += Time.deltaTime;
         if (reloadProgress >= reloadTime)
@@ -61,5 +89,11 @@ public class BonusFactory : MonoBehaviour
                 reloadProgress = 0;
             }
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

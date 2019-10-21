@@ -12,12 +12,14 @@ public class EnemyHealthManager : MonoBehaviour
     public int currentHealth;
     bool rotated = false;
     public PlayerController playerToChase;
+    public BonusFactory bonusInstantiator;
 
     // Start is called before the first frame update
     void Start()
     {
         ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
         ps.Stop();
+        bonusInstantiator = FindObjectOfType<BonusFactory>();
         playerToChase = FindObjectOfType<PlayerController>();
         currentHealth = maxHealth;
     }
@@ -41,6 +43,8 @@ public class EnemyHealthManager : MonoBehaviour
 
         if(timeBeforeDeath < timeToDie)
         {
+            int dice = Random.Range(0, 3);
+            if (dice == 1) bonusInstantiator.spawnBonusAtPosition(gameObject.transform.position);
             ps.Stop();
             gameObject.GetComponentInParent<ZombieFactoryController>().removeFromList(gameObject);      
             Destroy(gameObject);
