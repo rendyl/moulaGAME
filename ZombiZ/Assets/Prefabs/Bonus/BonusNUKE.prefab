@@ -177,6 +177,7 @@ MonoBehaviour:
   player: {fileID: 0}
   timeToLive: 10
   timeLiving: 0
+  gamo: {fileID: 0}
 --- !u!1 &6020218911130847083
 GameObject:
   m_ObjectHideFlags: 0

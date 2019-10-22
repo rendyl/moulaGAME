@@ -24,8 +24,10 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody myRigidBody;
     public float kills;
+    public float moulaga;
     public float score;
 
+    public TextMeshProUGUI magazineText;
     public TextMeshProUGUI weaponText;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI bonusMSText;
@@ -37,7 +39,7 @@ public class PlayerController : MonoBehaviour
     public GameObject particleMS;
     public GameObject particleAS;
 
-    bool rotated = false;
+    public bool rotated = false;
     public bool alive = true;
     public int indexActive = 3;
 
@@ -96,8 +98,7 @@ public class PlayerController : MonoBehaviour
 
     void setSCOREText()
     {
-        score = kills * 50;
-        scoreText.SetText("MOULAGA : {0} $", score);
+        scoreText.SetText("MOULAGA : {0} $", moulaga);
     }
 
     // Start is called before the first frame update
@@ -109,6 +110,7 @@ public class PlayerController : MonoBehaviour
         enEspritText.SetText("");
         bonusMSText.SetText("");
         bonusASText.SetText("");
+        moulaga = 0;
         kills = 0;
         setSCOREText();
         myRigidBody = GetComponent<Rigidbody>();
@@ -120,6 +122,7 @@ public class PlayerController : MonoBehaviour
         if(alive) myRigidBody.velocity = moveVelocity;
         else if (!rotated)
         {
+            
             myRigidBody.velocity = new Vector3(0, 0, 0); 
             rotated = true;
             transform.Rotate(0, 0, 90);
@@ -164,7 +167,6 @@ public class PlayerController : MonoBehaviour
             timeMaxBonusINV = 0;
         }
 
-
         if (timeBonusFR < timeMaxBonusFR) timeBonusFR += Time.deltaTime;
         float fireRate = GetComponentInChildren<GunController>().baseTimeBetweenShots;
         float baseFireRate = GetComponentInChildren<GunController>().timeBetweenShots;
@@ -178,9 +180,11 @@ public class PlayerController : MonoBehaviour
             GetComponentInChildren<GunController>().timeBetweenShots = GetComponentInChildren<GunController>().baseTimeBetweenShots;
         }
 
-
         if(alive)
         {
+            if (myGun.actualReloading < myGun.reloadingTime) magazineText.SetText("RELOADING");
+            else magazineText.SetText(myGun.nbBallesInChargeur + "/" + myGun.nbBallesTot);
+
             moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
             moveVelocity = moveInput.normalized * moveSpeed;
 
@@ -205,13 +209,14 @@ public class PlayerController : MonoBehaviour
                 gunList[indexActive].gameObject.SetActive(true);
                 myGun = gunList[indexActive];
                 weaponText.SetText(myGun.weaponName);
+                magazineText.SetText(myGun.nbBallesInChargeur + "/" + myGun.nbBallesTot);
                 myGun.isFiring = actualState;
                 if(timeBonusFR < timeMaxBonusFR) myGun.timeBetweenShots /= 2;
             }
 
             if(myGun.shootingType == "semiAuto")
             {
-               myGun.isFiring = false;
+                myGun.isFiring = false;
             }
             else if (myGun.shootingType == "auto")
             {
@@ -224,7 +229,11 @@ public class PlayerController : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 myGun.isFiring = true;
-            }    
+            }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                myGun.setReload();
+            }
         }
         else
         {

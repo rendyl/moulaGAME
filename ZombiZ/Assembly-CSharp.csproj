@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AudioTerrainController.cs" />
+     <Compile Include="Assets\nukeEffectsManager.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -118,6 +119,8 @@
      <Compile Include="Assets\Scripts\Manager\EnemyHealthManager.cs" />
      <Compile Include="Assets\Scripts\Manager\Obstacle.cs" />
      <Compile Include="Assets\Scripts\Manager\PlayerHealthManager.cs" />
+     <Compile Include="Assets\Scripts\Manager\Shops\ShopHealth.cs" />
+     <Compile Include="Assets\Scripts\Manager\Shops\ShopManager.cs" />
      <Compile Include="Assets\Scripts\ProceduralGenerator\HerbGenerator.cs" />
      <Compile Include="Assets\Scripts\UI\FieldOfView.cs" />
      <Compile Include="Assets\Scripts\UI\FieldOfViewEditor.cs" />

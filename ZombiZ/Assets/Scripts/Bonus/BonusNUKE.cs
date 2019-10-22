@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class BonusNUKE : Bonus
 {
+    nukeEffectsManager nEf;
+
+    void Start()
+    {
+        nEf = FindObjectOfType<nukeEffectsManager>();
+    }
+
     public override void activateBonus()
     {
         ZombieFactoryController zController = FindObjectOfType<ZombieFactoryController>();
@@ -11,5 +18,7 @@ public class BonusNUKE : Bonus
         {
         	zombie.GetComponent<EnemyHealthManager>().currentHealth = 0;
         }
+
+        nEf.activer();
     }
 }

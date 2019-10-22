@@ -35,7 +35,8 @@ public class EnemyHealthManager : MonoBehaviour
         if(timeToDie > 0 && !rotated)
         {
             rotated = true;
-            playerToChase.kills += killValue;
+            playerToChase.moulaga += 50 * killValue;
+            playerToChase.kills++;
             transform.Rotate(0, 0, 90);
         }
 
@@ -52,8 +53,6 @@ public class EnemyHealthManager : MonoBehaviour
             gameObject.GetComponent<CapsuleCollider>().isTrigger = true;
             gameObject.GetComponent<EnemyController>().alive = false; 
         }
-
-        
     }
 
     public void hurtEnemy(int damage, Vector3 pointHit)
@@ -61,7 +60,7 @@ public class EnemyHealthManager : MonoBehaviour
         if(currentHealth > 0)
         {
             ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
-            playerToChase.kills += 0.2f;
+            playerToChase.moulaga += 10;
             ps.transform.position = pointHit;
             ps.Play();
             timePartPlay = 0f;
