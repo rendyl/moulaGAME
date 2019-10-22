@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 5218268}
   - component: {fileID: 5218267}
   - component: {fileID: 5218266}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Crosse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 6938783}
   - component: {fileID: 6938785}
   - component: {fileID: 6938784}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +618,7 @@ GameObject:
   - component: {fileID: 57903832}
   - component: {fileID: 57903831}
   - component: {fileID: 57903830}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 85154819}
   - component: {fileID: 85154821}
   - component: {fileID: 85154820}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: AutoShotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -887,7 +887,7 @@ GameObject:
   - component: {fileID: 111769340}
   - component: {fileID: 111769339}
   - component: {fileID: 111769338}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ScopeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1071,7 +1071,7 @@ GameObject:
   - component: {fileID: 115342930}
   - component: {fileID: 115342929}
   - component: {fileID: 115342928}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Crosse (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1255,7 +1255,7 @@ GameObject:
   - component: {fileID: 122620725}
   - component: {fileID: 122620724}
   - component: {fileID: 122620723}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Barrell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1439,7 +1439,7 @@ GameObject:
   - component: {fileID: 141488113}
   - component: {fileID: 141488112}
   - component: {fileID: 141488111}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Scope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1823,7 +1823,7 @@ GameObject:
   - component: {fileID: 188045775}
   - component: {fileID: 188045774}
   - component: {fileID: 188045773}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1914,7 +1914,7 @@ GameObject:
   - component: {fileID: 226412612}
   - component: {fileID: 226412614}
   - component: {fileID: 226412613}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: SemiAutoARRafale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2082,7 +2082,7 @@ GameObject:
   - component: {fileID: 257267502}
   - component: {fileID: 257267501}
   - component: {fileID: 257267500}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2316,7 +2316,7 @@ GameObject:
   - component: {fileID: 286696944}
   - component: {fileID: 286696943}
   - component: {fileID: 286696942}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Barrell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2406,7 +2406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 321619390}
   - component: {fileID: 321619391}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GunEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2499,7 +2499,7 @@ GameObject:
   - component: {fileID: 322220378}
   - component: {fileID: 322220377}
   - component: {fileID: 322220376}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Crosse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2591,7 +2591,7 @@ GameObject:
   - component: {fileID: 338649882}
   - component: {fileID: 338649881}
   - component: {fileID: 338649880}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7444,7 +7444,7 @@ GameObject:
   - component: {fileID: 356664890}
   - component: {fileID: 356664889}
   - component: {fileID: 356664888}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: SemiAutoAR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7832,7 +7832,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419774464
 GameObject:
@@ -7846,7 +7846,7 @@ GameObject:
   - component: {fileID: 419774468}
   - component: {fileID: 419774467}
   - component: {fileID: 419774466}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7938,7 +7938,7 @@ GameObject:
   - component: {fileID: 431689588}
   - component: {fileID: 431689587}
   - component: {fileID: 431689586}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8088,7 +8088,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &496463097
 GameObject:
@@ -8100,7 +8100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 496463098}
   - component: {fileID: 496463099}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GunEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8193,7 +8193,7 @@ GameObject:
   - component: {fileID: 502884565}
   - component: {fileID: 502884564}
   - component: {fileID: 502884563}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Barrell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8285,7 +8285,7 @@ GameObject:
   - component: {fileID: 532564708}
   - component: {fileID: 532564707}
   - component: {fileID: 532564706}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8379,7 +8379,7 @@ GameObject:
   - component: {fileID: 534669906}
   - component: {fileID: 534669907}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Game Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8524,7 +8524,7 @@ Transform:
   - {fileID: 1224826808}
   - {fileID: 1204146120}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &538724739
 AudioSource:
@@ -8653,7 +8653,7 @@ GameObject:
   - component: {fileID: 559879094}
   - component: {fileID: 559879093}
   - component: {fileID: 559879092}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ScopeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8745,7 +8745,7 @@ GameObject:
   - component: {fileID: 583415751}
   - component: {fileID: 583415750}
   - component: {fileID: 583415749}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Crosse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13809,7 +13809,7 @@ GameObject:
   - component: {fileID: 710742459}
   - component: {fileID: 710742458}
   - component: {fileID: 710742457}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Scope (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14370,7 +14370,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e27c79f7c18d43747b35bd0c5460abbe, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ea580044c8360b04eb9abb7aa3a9a266, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -14468,6 +14468,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6688690073881539072, guid: c588a265a0b820846bab20a88f494448,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6688690073881539073, guid: c588a265a0b820846bab20a88f494448,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14538,6 +14543,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d11260764802aaf4385886b6f4a2fd91, type: 2}
+    - target: {fileID: 6688690074509803114, guid: c588a265a0b820846bab20a88f494448,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.15686274
+      objectReference: {fileID: 0}
+    - target: {fileID: 6688690074509803114, guid: c588a265a0b820846bab20a88f494448,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6688690074509803114, guid: c588a265a0b820846bab20a88f494448,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.99157286
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c588a265a0b820846bab20a88f494448, type: 3}
 --- !u!1 &829504548
@@ -14756,6 +14776,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6688690073881539072, guid: c588a265a0b820846bab20a88f494448,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6688690073881539073, guid: c588a265a0b820846bab20a88f494448,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14841,7 +14866,7 @@ GameObject:
   - component: {fileID: 866120433}
   - component: {fileID: 866120432}
   - component: {fileID: 866120431}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14921,6 +14946,118 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 866120429}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &867744526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 867744529}
+  - component: {fileID: 867744528}
+  - component: {fileID: 867744527}
+  - component: {fileID: 867744530}
+  - component: {fileID: 867744531}
+  m_Layer: 0
+  m_Name: Weapon Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!81 &867744527
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867744526}
+  m_Enabled: 1
+--- !u!20 &867744528
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867744526}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &867744529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867744526}
+  m_LocalRotation: {x: -0.07151082, y: 0.87368405, z: -0.13626008, w: -0.46151456}
+  m_LocalPosition: {x: 2.0901475, y: 2.1931956, z: 2.278636}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &867744530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867744526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: e9ba1ad0d21d3dd41a2805a589bb3e07, type: 2}
+--- !u!114 &867744531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867744526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dedb7cce381ed408c097d851ef3768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1295262470}
+  turnSpeed: 4
 --- !u!1 &888217259
 GameObject:
   m_ObjectHideFlags: 0
@@ -14931,7 +15068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 888217260}
   - component: {fileID: 888217261}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GunEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15024,7 +15161,7 @@ GameObject:
   - component: {fileID: 890447598}
   - component: {fileID: 890447597}
   - component: {fileID: 890447596}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15116,7 +15253,7 @@ GameObject:
   - component: {fileID: 900244266}
   - component: {fileID: 900244265}
   - component: {fileID: 900244264}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Scope (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15208,7 +15345,7 @@ GameObject:
   - component: {fileID: 913916087}
   - component: {fileID: 913916086}
   - component: {fileID: 913916085}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20857,7 +20994,7 @@ GameObject:
   - component: {fileID: 1107109952}
   - component: {fileID: 1107109951}
   - component: {fileID: 1107109950}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20948,7 +21085,7 @@ GameObject:
   - component: {fileID: 1109688221}
   - component: {fileID: 1109688223}
   - component: {fileID: 1109688222}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LMG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21114,7 +21251,7 @@ GameObject:
   - component: {fileID: 1133501593}
   - component: {fileID: 1133501594}
   - component: {fileID: 1133501595}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: SemiShotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21278,7 +21415,7 @@ GameObject:
   - component: {fileID: 1151591358}
   - component: {fileID: 1151591357}
   - component: {fileID: 1151591356}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Scope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21530,7 +21667,7 @@ GameObject:
   - component: {fileID: 1216747839}
   - component: {fileID: 1216747838}
   - component: {fileID: 1216747837}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Barrell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21673,7 +21810,7 @@ GameObject:
   - component: {fileID: 1226563884}
   - component: {fileID: 1226563883}
   - component: {fileID: 1226563882}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Crosse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21770,7 +21907,7 @@ GameObject:
   - component: {fileID: 1253305194}
   - component: {fileID: 1253305196}
   - component: {fileID: 1253305195}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: AR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21906,7 +22043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunShootSound: {fileID: 1253305195}
-  weaponName: AK-47
+  weaponName: THOMPSON
   shootingType: auto
   weaponType: rifle
   isFiring: 0
@@ -22048,7 +22185,7 @@ GameObject:
   - component: {fileID: 1275701248}
   - component: {fileID: 1275701247}
   - component: {fileID: 1275701246}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Barrell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22138,7 +22275,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277721053}
   - component: {fileID: 1277721054}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GunEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22231,7 +22368,7 @@ GameObject:
   - component: {fileID: 1286312219}
   - component: {fileID: 1286312218}
   - component: {fileID: 1286312217}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Crosse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22524,7 +22661,7 @@ Transform:
   - {fileID: 155111588}
   - {fileID: 1425813044}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1295262471
 MonoBehaviour:
@@ -22763,7 +22900,7 @@ GameObject:
   - component: {fileID: 1300641920}
   - component: {fileID: 1300641919}
   - component: {fileID: 1300641918}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ScopeBase (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22947,7 +23084,7 @@ GameObject:
   - component: {fileID: 1311084098}
   - component: {fileID: 1311084097}
   - component: {fileID: 1311084096}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23242,7 +23379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1446003557}
   - component: {fileID: 1446003558}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GunEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28216,6 +28353,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6688690073881539072, guid: c588a265a0b820846bab20a88f494448,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6688690073881539073, guid: c588a265a0b820846bab20a88f494448,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28276,6 +28418,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d11260764802aaf4385886b6f4a2fd91, type: 2}
+    - target: {fileID: 6688690074509803114, guid: c588a265a0b820846bab20a88f494448,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.15686274
+      objectReference: {fileID: 0}
+    - target: {fileID: 6688690074509803114, guid: c588a265a0b820846bab20a88f494448,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6688690074509803114, guid: c588a265a0b820846bab20a88f494448,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9779453
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c588a265a0b820846bab20a88f494448, type: 3}
 --- !u!1 &1505028984
@@ -28653,7 +28810,7 @@ GameObject:
   - component: {fileID: 1540168795}
   - component: {fileID: 1540168794}
   - component: {fileID: 1540168793}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Crosse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28745,7 +28902,7 @@ GameObject:
   - component: {fileID: 1588323972}
   - component: {fileID: 1588323971}
   - component: {fileID: 1588323970}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ScopeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28929,7 +29086,7 @@ GameObject:
   - component: {fileID: 1608933032}
   - component: {fileID: 1608933031}
   - component: {fileID: 1608933030}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29021,7 +29178,7 @@ GameObject:
   - component: {fileID: 1653440367}
   - component: {fileID: 1653440366}
   - component: {fileID: 1653440365}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Crosse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29288,6 +29445,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lantern (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6688690073881539072, guid: c588a265a0b820846bab20a88f494448,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6688690073881539073, guid: c588a265a0b820846bab20a88f494448,
         type: 3}
@@ -34110,7 +34272,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0a2df2e45f2321044a166c05c72c33c8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 46bb18e93e6e4d44a809c2824d83142a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -39490,7 +39652,7 @@ Transform:
   m_Children:
   - {fileID: 2043632269}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1801549487
 PrefabInstance:
@@ -39503,6 +39665,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lantern (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6688690073881539072, guid: c588a265a0b820846bab20a88f494448,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6688690073881539073, guid: c588a265a0b820846bab20a88f494448,
         type: 3}
@@ -39682,7 +39849,7 @@ GameObject:
   - component: {fileID: 1895815199}
   - component: {fileID: 1895815198}
   - component: {fileID: 1895815197}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ScopeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39772,7 +39939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1904260341}
   - component: {fileID: 1904260342}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GunEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39949,7 +40116,7 @@ GameObject:
   - component: {fileID: 1952058295}
   - component: {fileID: 1952058294}
   - component: {fileID: 1952058293}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ScopeBase (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40133,6 +40300,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6688690073881539072, guid: c588a265a0b820846bab20a88f494448,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6688690073881539073, guid: c588a265a0b820846bab20a88f494448,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -40203,6 +40375,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d11260764802aaf4385886b6f4a2fd91, type: 2}
+    - target: {fileID: 6688690074509803114, guid: c588a265a0b820846bab20a88f494448,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.15686274
+      objectReference: {fileID: 0}
+    - target: {fileID: 6688690074509803114, guid: c588a265a0b820846bab20a88f494448,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6688690074509803114, guid: c588a265a0b820846bab20a88f494448,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.98414
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c588a265a0b820846bab20a88f494448, type: 3}
 --- !u!1001 &1992424326
@@ -40393,7 +40580,7 @@ GameObject:
   - component: {fileID: 2011055146}
   - component: {fileID: 2011055145}
   - component: {fileID: 2011055144}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40485,7 +40672,7 @@ GameObject:
   - component: {fileID: 2011111961}
   - component: {fileID: 2011111960}
   - component: {fileID: 2011111959}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40577,7 +40764,7 @@ GameObject:
   - component: {fileID: 2032578257}
   - component: {fileID: 2032578256}
   - component: {fileID: 2032578255}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Canon (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41009,7 +41196,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2106959560
 GameObject:
@@ -41148,7 +41335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2126685512}
   - component: {fileID: 2126685513}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GunEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
