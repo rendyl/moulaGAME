@@ -13,6 +13,7 @@ public class ZombieFactoryController : MonoBehaviour
     public int nbMaxZombies = 20;
     public int nbZombieBase = 5;
     public List<GameObject> listZombies;
+    public ParticleSystem nukeParticles;
 
     // Start is called before the first frame update
     void Start()
@@ -34,20 +35,23 @@ public class ZombieFactoryController : MonoBehaviour
     void Update()
     {
         reloadProgress += Time.deltaTime;
-        if (reloadProgress >= reloadTime)
+        if(!nukeParticles.isEmitting)
         {
-            if(listZombies.Count < nbMaxZombies)
+            if (reloadProgress >= reloadTime)
             {
-                int dice = Random.Range(0, 101);
-                GameObject zombie;
-                if(dice < 85) zombie = Instantiate<GameObject>(zombiePrefab, new Vector3(Random.Range(-10, 10), 1, Random.Range(5, 10)), Quaternion.identity);
-                else if(85 <= dice && dice < 95) zombie = Instantiate<GameObject>(zombieBIGPrefab, new Vector3(Random.Range(-10, 10), 1.5f, Random.Range(5, 10)), Quaternion.identity);
-                else zombie = Instantiate<GameObject>(zombieRICHPrefab, new Vector3(Random.Range(-10, 10), 1.2f, Random.Range(5, 10)), Quaternion.identity);
-                
-                zombie.transform.parent = gameObject.transform;
-                listZombies.Add(zombie);
-                reloadProgress = 0;
-            }    
-        }
+                if (listZombies.Count < nbMaxZombies)
+                {
+                    int dice = Random.Range(0, 101);
+                    GameObject zombie;
+                    if (dice < 85) zombie = Instantiate<GameObject>(zombiePrefab, new Vector3(Random.Range(-10, 10), 1, Random.Range(5, 10)), Quaternion.identity);
+                    else if (85 <= dice && dice < 95) zombie = Instantiate<GameObject>(zombieBIGPrefab, new Vector3(Random.Range(-10, 10), 1.5f, Random.Range(5, 10)), Quaternion.identity);
+                    else zombie = Instantiate<GameObject>(zombieRICHPrefab, new Vector3(Random.Range(-10, 10), 1.2f, Random.Range(5, 10)), Quaternion.identity);
+
+                    zombie.transform.parent = gameObject.transform;
+                    listZombies.Add(zombie);
+                    reloadProgress = 0;
+                }
+            }
+        }      
     }
 }

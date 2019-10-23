@@ -27,21 +27,21 @@ public class BonusFactory : MonoBehaviour
 
     public void spawnBonusAtPosition(Vector3 position)
     {
-        int dice = Random.Range(0, 105);
+        int dice = Random.Range(0, 115);
         GameObject gameObjectToInstantiate;
-        if (dice < 33)
+        if (dice < 25)
         {
             gameObjectToInstantiate = bonusMSPrefab;
         }
-        else if (33 <= dice && dice < 66)
+        else if (25 <= dice && dice < 50)
         {
             gameObjectToInstantiate = bonusHPPrefab;
         }
-        else if (66 < dice && dice <= 99)
+        else if (50 < dice && dice <= 75)
         {
             gameObjectToInstantiate = bonusFRPrefab;
         }
-        else if (99 < dice && dice <= 102)
+        else if (75 < dice && dice <= 95)
         {
             gameObjectToInstantiate = bonusNUKEPrefab;
         }

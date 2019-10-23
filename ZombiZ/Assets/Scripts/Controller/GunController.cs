@@ -44,11 +44,16 @@ public class GunController : MonoBehaviour
         if (weaponType == "shotgun")
         {
             for(int i = 0; i < 5; i++)
-            { 
+            {   
                 BulletController newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation * Quaternion.Euler(0f, 0f, +10f - i * 5f)) as BulletController;
                 newBullet.speed = bulletSpeed;
                 newBullet.type = "normal";
                 newBullet.dmg = bulletDMG;
+                if (i == 0)
+                {
+                    newBullet.gameObject.GetComponent<AudioSource>().clip = gunShootSound.clip;
+                    newBullet.gameObject.GetComponent<AudioSource>().Play();
+                }
             }
 
             nbBallesInChargeur--;
@@ -60,6 +65,9 @@ public class GunController : MonoBehaviour
             newBullet.speed = bulletSpeed;
             newBullet.type = "normal";
             newBullet.dmg = bulletDMG;
+
+            newBullet.gameObject.GetComponent<AudioSource>().clip = gunShootSound.clip;
+            newBullet.gameObject.GetComponent<AudioSource>().Play();
 
             nbBallesInChargeur--;
         }
@@ -73,6 +81,9 @@ public class GunController : MonoBehaviour
                 newBullet.speed = bulletSpeed;
                 newBullet.type = "normal"; 
                 newBullet.dmg = bulletDMG;
+
+                newBullet.gameObject.GetComponent<AudioSource>().clip = gunShootSound.clip;
+                newBullet.gameObject.GetComponent<AudioSource>().Play();
             }
 
             nbBallesInChargeur -= nbBallesBurst;
@@ -84,6 +95,9 @@ public class GunController : MonoBehaviour
             newBullet.speed = bulletSpeed;
             newBullet.type = "perforing";
             newBullet.dmg = bulletDMG;
+
+            newBullet.gameObject.GetComponent<AudioSource>().clip = gunShootSound.clip;
+            newBullet.gameObject.GetComponent<AudioSource>().Play();
 
             nbBallesInChargeur--;
         }       
@@ -124,7 +138,6 @@ public class GunController : MonoBehaviour
                     {
                         if (shotCounter <= 0)
                         {
-                            gunShootSound.Play();
                             GetComponentInChildren<Light>().enabled = true;
                             shotCounter = timeBetweenShots;
 

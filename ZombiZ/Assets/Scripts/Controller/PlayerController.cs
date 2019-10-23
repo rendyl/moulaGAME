@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 7;
     public float baseMoveSpeed = 7;
 
+    public float attackSpeedMultiplier = 1f;
+    public float reloadSpeedMultiplier = 1f;
+    public float moveSpeedMultiplier = 1f;
+
     float timeBonusHP = 0;
     float timeMaxBonusHP = 0;
 
@@ -105,16 +109,39 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         myGun = gunList[indexActive];
+        myGun.timeBetweenShots = myGun.baseTimeBetweenShots * attackSpeedMultiplier;
+        myGun.reloadingTime = myGun.reloadingTime * reloadSpeedMultiplier;
         myGun.gameObject.SetActive(true);
+
         weaponText.SetText(myGun.weaponName);
         enEspritText.SetText("");
         bonusMSText.SetText("");
         bonusASText.SetText("");
+
         moulaga = 0;
         kills = 0;
+
         setSCOREText();
         myRigidBody = GetComponent<Rigidbody>();
 		mainCamera = FindObjectOfType<Camera>();
+    }
+
+    public void updateATKSpeed(float multiplier)
+    {
+        attackSpeedMultiplier = multiplier * attackSpeedMultiplier;
+        myGun.timeBetweenShots = myGun.timeBetweenShots * attackSpeedMultiplier;
+    }
+
+    public void updateMoveSpeed(float multiplier)
+    {
+        moveSpeedMultiplier = multiplier * moveSpeedMultiplier;
+        moveSpeed = baseMoveSpeed * moveSpeedMultiplier;
+    }
+
+    public void updateReloadSpeed(float multiplier)
+    {
+        reloadSpeedMultiplier = multiplier * reloadSpeedMultiplier;
+        myGun.reloadingTime = myGun.reloadingTime * reloadSpeedMultiplier;
     }
 
     void FixedUpdate()
@@ -149,7 +176,7 @@ public class PlayerController : MonoBehaviour
             bonusMSText.SetText("");
             timeBonusMS = 0;
             timeMaxBonusMS = 0;
-            moveSpeed = baseMoveSpeed;
+            moveSpeed = baseMoveSpeed * moveSpeedMultiplier;
         }
 
         if (timeBonusINV < timeMaxBonusINV) timeBonusINV += Time.deltaTime;
@@ -168,8 +195,8 @@ public class PlayerController : MonoBehaviour
         }
 
         if (timeBonusFR < timeMaxBonusFR) timeBonusFR += Time.deltaTime;
-        float fireRate = GetComponentInChildren<GunController>().baseTimeBetweenShots;
-        float baseFireRate = GetComponentInChildren<GunController>().timeBetweenShots;
+        float fireRate = myGun.baseTimeBetweenShots;
+        float baseFireRate = myGun.timeBetweenShots;
 
         if (timeBonusFR > timeMaxBonusFR && fireRate != baseFireRate)
         {
@@ -177,7 +204,7 @@ public class PlayerController : MonoBehaviour
             bonusASText.SetText("");
             timeBonusFR = 0;
             timeMaxBonusFR = 0;
-            GetComponentInChildren<GunController>().timeBetweenShots = GetComponentInChildren<GunController>().baseTimeBetweenShots;
+            myGun.timeBetweenShots = myGun.baseTimeBetweenShots * attackSpeedMultiplier;
         }
 
         if(alive)
@@ -186,32 +213,46 @@ public class PlayerController : MonoBehaviour
             else magazineText.SetText(myGun.nbBallesInChargeur + "/" + myGun.nbBallesTot);
 
             moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-            moveVelocity = moveInput.normalized * moveSpeed;
+            moveVelocity = moveInput.normalized * moveSpeed * moveSpeedMultiplier;
+
+            // Rotation du personnage
 
             Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
             Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
             float rayLength;
-
+            
             if (groundPlane.Raycast(cameraRay, out rayLength))
             {
                 Vector3 pointToLook = cameraRay.GetPoint(rayLength);
                 transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
             }
 
+            // Switch d'Arme
             if(Input.mouseScrollDelta.y != 0)
             {
                 bool actualState = myGun.isFiring;
-                myGun.timeBetweenShots = myGun.baseTimeBetweenShots;
+
+                myGun.timeBetweenShots = myGun.baseTimeBetweenShots * attackSpeedMultiplier;
+                myGun.reloadingTime = myGun.reloadingTime * reloadSpeedMultiplier;
                 myGun.isFiring = false;
+
                 gunList[indexActive].gameObject.SetActive(false);
+
                 indexActive = (indexActive + (int)Input.mouseScrollDelta.y) % (int)gunList.Count;
                 if(indexActive < 0) indexActive = (int)gunList.Count - 1;
+
                 gunList[indexActive].gameObject.SetActive(true);
+
                 myGun = gunList[indexActive];
+
+                myGun.timeBetweenShots = myGun.baseTimeBetweenShots * attackSpeedMultiplier;
+                myGun.reloadingTime = myGun.reloadingTime * reloadSpeedMultiplier;
+                if (timeBonusFR < timeMaxBonusFR) myGun.timeBetweenShots /= 2;
+
+                myGun.isFiring = actualState;
+
                 weaponText.SetText(myGun.weaponName);
                 magazineText.SetText(myGun.nbBallesInChargeur + "/" + myGun.nbBallesTot);
-                myGun.isFiring = actualState;
-                if(timeBonusFR < timeMaxBonusFR) myGun.timeBetweenShots /= 2;
             }
 
             if(myGun.shootingType == "semiAuto")
