@@ -270,7 +270,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            myRigidBody.velocity = new Vector3(0, -1, 0); 
+            myRigidBody.velocity = new Vector3(0, -1, 0);
         }
     }
 
