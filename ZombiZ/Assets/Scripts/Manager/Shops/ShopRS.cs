@@ -15,9 +15,10 @@ public class ShopRS : ShopManager
     public override void shopping()
     {
         if (levelUpgrade < 5)
-        {
+        { 
             client.GetComponent<PlayerController>().updateReloadSpeed(rsMultiplier);
             levelUpgrade++;
+            price = price * levelUpgrade;
             nomProduit = "RELOADING SPEED LEVEL " + levelUpgrade;
         }
 

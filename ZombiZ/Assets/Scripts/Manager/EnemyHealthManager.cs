@@ -9,7 +9,7 @@ public class EnemyHealthManager : MonoBehaviour
     public float timePartPlay = 5f;
     public int maxHealth;
     public int killValue;
-    public int currentHealth;
+    public float currentHealth;
     bool rotated = false;
     public PlayerController playerToChase;
     public BonusFactory bonusInstantiator;
@@ -44,7 +44,7 @@ public class EnemyHealthManager : MonoBehaviour
 
         if(timeBeforeDeath < timeToDie)
         {
-            int dice = Random.Range(0, 3);
+            int dice = Random.Range(0, 5);
             if (dice == 1) bonusInstantiator.spawnBonusAtPosition(gameObject.transform.position);
             ps.Stop();
             gameObject.GetComponentInParent<ZombieFactoryController>().removeFromList(gameObject);      
@@ -59,7 +59,7 @@ public class EnemyHealthManager : MonoBehaviour
         }
     }
 
-    public void hurtEnemy(int damage, Vector3 pointHit)
+    public void hurtEnemy(float damage, Vector3 pointHit)
     {
         if(currentHealth > 0)
         {

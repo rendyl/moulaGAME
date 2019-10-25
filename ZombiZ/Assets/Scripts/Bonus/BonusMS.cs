@@ -6,6 +6,6 @@ public class BonusMS : Bonus
 {
     public override void activateBonus()
     {
-        player.GetComponent<PlayerController>().upSpeed(3, 10);
+        player.GetComponent<PlayerController>().upSpeed(1.5f, 10);
     }
 }

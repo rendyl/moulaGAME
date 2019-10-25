@@ -18,6 +18,7 @@ public class ShopAS : ShopManager
 
             client.GetComponent<PlayerController>().updateATKSpeed(0.9f);
             levelUpgrade++;
+            price = price * levelUpgrade;
             nomProduit = "ATTACK SPEED LEVEL " + levelUpgrade;
         }
         

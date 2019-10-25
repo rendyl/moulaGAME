@@ -18,6 +18,7 @@ public class ShopMS : ShopManager
         {
             client.GetComponent<PlayerController>().updateMoveSpeed(msMultiplier);
             levelUpgrade++;
+            price = price * levelUpgrade;
             nomProduit = "MOVE SPEED LEVEL " + levelUpgrade;
         }
 

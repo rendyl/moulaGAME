@@ -18,13 +18,13 @@ public class ShopWeapon : ShopManager
         {
             foreach (GunController gc in client.GetComponent<PlayerController>().gunList)
             {
-                if (gc == weaponToSell.GetComponent<GunController>()) gc.nbBallesTot += gc.ballesParChargeur;
+                if (gc == weaponToSell.GetComponent<GunController>()) gc.nbBallesTot += 5*gc.ballesParChargeur;
             }
         }
         else
         {
             client.GetComponent<PlayerController>().gunList.Add(weaponToSell.GetComponent<GunController>());
-            nomProduit = "1 CHARGEUR DE " + nomProduit;
+            nomProduit = "5 CHARGEURS DE " + nomProduit;
             price = priceChargeur;
         }
     }

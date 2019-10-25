@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     public float reloadSpeedMultiplier = 1f;
     public float moveSpeedMultiplier = 1f;
 
+    public float bonusASMultiplier = 1;
+    public float bonusMSMultiplier = 1;
+
     float timeBonusHP = 0;
     float timeMaxBonusHP = 0;
 
@@ -56,6 +59,8 @@ public class PlayerController : MonoBehaviour
 
     public void invincible(float timeBonus)
     {
+        particleINV.GetComponent<AudioSource>().volume = 0.5f;
+        particleINV.GetComponent<AudioSource>().pitch = 1f;
         particleINV.SetActive(false);
         particleINV.SetActive(true);
         enEspritText.transform.position = new Vector3(160, 380f, 0);
@@ -65,14 +70,15 @@ public class PlayerController : MonoBehaviour
         timeMaxBonusINV = timeBonus;
     }
 
-    public void upSpeed(float msToAdd, float timeBonus)
+    public void upSpeed(float multiplier, float timeBonus)
     {
         timeBonusMS = 0;
-        if (moveSpeed == baseMoveSpeed)
+        if (bonusMSMultiplier == 1)
         {
             particleMS.SetActive(true);
-            bonusMSText.SetText("MS+"); 
-            moveSpeed += msToAdd;
+            bonusMSText.SetText("MS+");
+            bonusMSMultiplier = multiplier;
+            updateMoveSpeed(1f);
         }
         timeMaxBonusMS = timeBonus;
     }
@@ -86,17 +92,14 @@ public class PlayerController : MonoBehaviour
 
     public void upFireRate(float multiplier, float timeBonus)
     {
-        float fireRate = GetComponentInChildren<GunController>().baseTimeBetweenShots;
-        float baseFireRate = GetComponentInChildren<GunController>().timeBetweenShots;
-
         timeBonusFR = 0;
-        if (fireRate == baseFireRate)
+        if (bonusASMultiplier == 1)
         {
             particleAS.SetActive(true);
             bonusASText.SetText("AS+");
-            GetComponentInChildren<GunController>().timeBetweenShots /= multiplier;
+            bonusASMultiplier = multiplier;
+            updateATKSpeed(1f);
         }
-
         timeMaxBonusFR = timeBonus;
     }
 
@@ -129,19 +132,19 @@ public class PlayerController : MonoBehaviour
     public void updateATKSpeed(float multiplier)
     {
         attackSpeedMultiplier = multiplier * attackSpeedMultiplier;
-        myGun.timeBetweenShots = myGun.timeBetweenShots * attackSpeedMultiplier;
+        myGun.timeBetweenShots = myGun.baseTimeBetweenShots * attackSpeedMultiplier / bonusASMultiplier;
     }
 
     public void updateMoveSpeed(float multiplier)
     {
         moveSpeedMultiplier = multiplier * moveSpeedMultiplier;
-        moveSpeed = baseMoveSpeed * moveSpeedMultiplier;
+        moveSpeed = baseMoveSpeed * moveSpeedMultiplier * bonusMSMultiplier;
     }
 
     public void updateReloadSpeed(float multiplier)
     {
         reloadSpeedMultiplier = multiplier * reloadSpeedMultiplier;
-        myGun.reloadingTime = myGun.reloadingTime * reloadSpeedMultiplier;
+        myGun.reloadingTime = myGun.baseReloadingTime * reloadSpeedMultiplier;
     }
 
     void FixedUpdate()
@@ -156,33 +159,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    void checkBonusINV()
     {
-        setSCOREText();
-
-        if (timeBonusHP < timeMaxBonusHP) timeBonusHP += Time.deltaTime;
-        if (timeBonusHP > timeMaxBonusHP)
-        {
-            particleHP.SetActive(false);
-            timeBonusHP = 0;
-            timeMaxBonusHP = 0;
-        }
-
-        if (timeBonusMS < timeMaxBonusMS) timeBonusMS += Time.deltaTime;
-        if (timeBonusMS > timeMaxBonusMS && moveSpeed != baseMoveSpeed)
-        {
-            particleMS.SetActive(false);
-            bonusMSText.SetText("");
-            timeBonusMS = 0;
-            timeMaxBonusMS = 0;
-            moveSpeed = baseMoveSpeed * moveSpeedMultiplier;
-        }
-
         if (timeBonusINV < timeMaxBonusINV) timeBonusINV += Time.deltaTime;
         if (timeBonusINV > 0)
         {
-            enEspritText.transform.position += 50 * timeBonusINV * new Vector3(1,0,0);
+            enEspritText.transform.position += 50 * timeBonusINV * new Vector3(1, 0, 0);
         }
         if (timeBonusINV > timeMaxBonusINV)
         {
@@ -191,21 +173,56 @@ public class PlayerController : MonoBehaviour
             particleINV.SetActive(false);
             isInvincible = false;
             timeBonusINV = 0;
-            timeMaxBonusINV = 0;
         }
-
+    }
+    
+    void checkBonusFR()
+    {
         if (timeBonusFR < timeMaxBonusFR) timeBonusFR += Time.deltaTime;
-        float fireRate = myGun.baseTimeBetweenShots;
-        float baseFireRate = myGun.timeBetweenShots;
-
-        if (timeBonusFR > timeMaxBonusFR && fireRate != baseFireRate)
+        if (timeBonusFR > timeMaxBonusFR)
         {
             particleAS.SetActive(false);
             bonusASText.SetText("");
             timeBonusFR = 0;
-            timeMaxBonusFR = 0;
-            myGun.timeBetweenShots = myGun.baseTimeBetweenShots * attackSpeedMultiplier;
+            bonusASMultiplier = 1f;
+            myGun.timeBetweenShots = myGun.baseTimeBetweenShots * attackSpeedMultiplier / bonusASMultiplier;
         }
+    }
+
+    void checkBonusMS()
+    {
+        if (timeBonusMS < timeMaxBonusMS) timeBonusMS += Time.deltaTime;
+        if (timeBonusMS > timeMaxBonusMS)
+        {
+            particleMS.SetActive(false);
+            bonusMSText.SetText("");
+            timeBonusMS = 0;
+            bonusMSMultiplier = 1f;
+            moveSpeed = baseMoveSpeed * moveSpeedMultiplier * bonusMSMultiplier;
+        }
+    }
+
+    void checkBonusHP()
+    {
+        if (timeBonusHP < timeMaxBonusHP) timeBonusHP += Time.deltaTime;
+        if (timeBonusHP > timeMaxBonusHP)
+        {
+            particleHP.SetActive(false);
+            timeBonusHP = 0;
+            timeMaxBonusHP = 0;
+        }
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        setSCOREText();
+
+        checkBonusFR();
+        checkBonusHP();
+        checkBonusMS();
+        checkBonusINV();
 
         if(alive)
         {
@@ -230,10 +247,11 @@ public class PlayerController : MonoBehaviour
             // Switch d'Arme
             if(Input.mouseScrollDelta.y != 0)
             {
+                
                 bool actualState = myGun.isFiring;
 
                 myGun.timeBetweenShots = myGun.baseTimeBetweenShots * attackSpeedMultiplier;
-                myGun.reloadingTime = myGun.reloadingTime * reloadSpeedMultiplier;
+                myGun.reloadingTime = myGun.baseReloadingTime * reloadSpeedMultiplier;
                 myGun.isFiring = false;
 
                 gunList[indexActive].gameObject.SetActive(false);
@@ -245,9 +263,8 @@ public class PlayerController : MonoBehaviour
 
                 myGun = gunList[indexActive];
 
-                myGun.timeBetweenShots = myGun.baseTimeBetweenShots * attackSpeedMultiplier;
-                myGun.reloadingTime = myGun.reloadingTime * reloadSpeedMultiplier;
-                if (timeBonusFR < timeMaxBonusFR) myGun.timeBetweenShots /= 2;
+                myGun.timeBetweenShots = myGun.baseTimeBetweenShots * attackSpeedMultiplier / bonusASMultiplier;
+                myGun.reloadingTime = myGun.baseReloadingTime * reloadSpeedMultiplier;
 
                 myGun.isFiring = actualState;
 
@@ -266,7 +283,12 @@ public class PlayerController : MonoBehaviour
                     myGun.isFiring = false;
                 }
             }
-            
+
+            if (Input.GetKey(KeyCode.P))
+            {
+                moulaga += 1000;
+            }
+
             if (Input.GetMouseButtonDown(0))
             {
                 myGun.isFiring = true;

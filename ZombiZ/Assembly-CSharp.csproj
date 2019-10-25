@@ -63,8 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AudioTerrainController.cs" />
-    <Compile Include="Assets\nukeEffectsManager.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -110,6 +108,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\Scripts\AudioTerrainController.cs" />
     <Compile Include="Assets\Scripts\Bonus\Bonus.cs" />
     <Compile Include="Assets\Scripts\Bonus\BonusFR.cs" />
     <Compile Include="Assets\Scripts\Bonus\BonusHP.cs" />
@@ -133,6 +132,7 @@
     <Compile Include="Assets\Scripts\Manager\Shops\ShopMS.cs" />
     <Compile Include="Assets\Scripts\Manager\Shops\ShopRS.cs" />
     <Compile Include="Assets\Scripts\Manager\Shops\ShopWeapon.cs" />
+    <Compile Include="Assets\Scripts\nukeEffectsManager.cs" />
     <Compile Include="Assets\Scripts\ProceduralGenerator\HerbGenerator.cs" />
     <Compile Include="Assets\Scripts\UI\CameraPres.cs" />
     <Compile Include="Assets\Scripts\UI\FieldOfView.cs" />

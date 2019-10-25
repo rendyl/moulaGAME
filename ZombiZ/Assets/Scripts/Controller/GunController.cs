@@ -5,6 +5,7 @@ using UnityEngine;
 public class GunController : MonoBehaviour
 {
     public AudioSource gunShootSound;
+    public AudioSource reloadSound;
 
     public string weaponName;
     public string shootingType;
@@ -20,6 +21,7 @@ public class GunController : MonoBehaviour
     public int nbBallesInChargeur;
 
     public float reloadingTime;
+    public float baseReloadingTime;
     public float actualReloading;
 
     public float bulletSpeed;
@@ -126,6 +128,7 @@ public class GunController : MonoBehaviour
                     actualReloading = 0;
                     if (nbBallesTot > 0)
                     {
+                        reloadSound.Play();
                         nbBallesTot += nbBallesInChargeur;
                         nbBallesInChargeur = Mathf.Min(nbBallesTot, ballesParChargeur);
                         nbBallesTot -= nbBallesInChargeur;
