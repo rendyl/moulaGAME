@@ -11,6 +11,7 @@ public class PlayerHealthManager : MonoBehaviour
 
     public TextMeshProUGUI hpText;
     public TextMeshProUGUI gameOVER;
+    public TextMeshProUGUI restartText;
 
     public ParticleSystem dmgParticles;
     public AudioSource dmgSound;
@@ -59,6 +60,7 @@ public class PlayerHealthManager : MonoBehaviour
             {
                 deathSound.Play();
                 gameOVER.SetText("GAME OVER");
+                restartText.gameObject.SetActive(true);
                 currentHealth = 0;
                 gameObject.GetComponent<PlayerController>().alive = false;
                 gameObject.GetComponent<PlayerController>().myGun.isFiring = false;

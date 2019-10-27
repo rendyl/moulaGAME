@@ -25,6 +25,7 @@ public class ShopMS : ShopManager
         if (levelUpgrade == 5)
         {
             price = 0;
+            canBuy = false;
             nomProduit = "MOVE SPEED LEVEL MAX";
         }
     }

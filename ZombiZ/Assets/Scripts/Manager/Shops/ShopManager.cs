@@ -12,6 +12,7 @@ public class ShopManager : MonoBehaviour
     public TextMeshProUGUI textSHOP;
     public float shopCD = 1f;
     public float cdActuel;
+    public bool canBuy = true;
 
     void Start()
     {
@@ -33,14 +34,17 @@ public class ShopManager : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            textSHOP.SetText("F : ACHETER " + nomProduit + "\nPOUR " + price + "$");
-            if(cdActuel >= shopCD)
+            if(canBuy) textSHOP.SetText("F : ACHETER " + nomProduit + "\nPOUR " + price + "$");
+            else textSHOP.SetText("CASSE TA MERE DE LA \nJ'AI PLUS RIEN A VENDRE");
+
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                if (Input.GetKeyDown(KeyCode.F))
+                if (cdActuel >= shopCD && canBuy)
                 {
                     cdActuel = 0;
                     if (client.moulaga >= price)
                     {
+                        GetComponent<AudioSource>().Play();
                         client.moulaga -= price;
                         shopping();
                     }

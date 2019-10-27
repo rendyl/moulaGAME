@@ -25,6 +25,7 @@ public class ShopRS : ShopManager
         if (levelUpgrade == 5)
         {
             price = 0;
+            canBuy = false;
             nomProduit = "RELOADING SPEED LEVEL MAX";
         }
     }

@@ -25,6 +25,7 @@ public class ShopAS : ShopManager
         if(levelUpgrade == 5)
         {
             price = 0;
+            canBuy = false;
             nomProduit = "ATTACK SPEED LEVEL MAX";
         }
     }
