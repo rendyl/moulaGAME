@@ -23,6 +23,7 @@ ScriptsOnlyBuild:
     - RotatingItem
     - RotatingItemZ
     - ShopAS
+    - ShopHPMAX
     - ShopHealth
     - ShopMS
     - ShopRS
@@ -161,39 +162,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11396}
     - Class: 114
-      Script: {instanceID: 11502}
+      Script: {instanceID: 11416}
     - Class: 114
-      Script: {instanceID: 11514}
+      Script: {instanceID: 11504}
     - Class: 114
-      Script: {instanceID: 11540}
+      Script: {instanceID: 11516}
     - Class: 114
-      Script: {instanceID: 11566}
+      Script: {instanceID: 11542}
     - Class: 114
-      Script: {instanceID: 11618}
+      Script: {instanceID: 11568}
     - Class: 114
-      Script: {instanceID: 11686}
+      Script: {instanceID: 11620}
     - Class: 114
-      Script: {instanceID: 11700}
+      Script: {instanceID: 11688}
     - Class: 114
-      Script: {instanceID: 11732}
+      Script: {instanceID: 11702}
     - Class: 114
-      Script: {instanceID: 11906}
+      Script: {instanceID: 11734}
     - Class: 114
-      Script: {instanceID: 11974}
+      Script: {instanceID: 11908}
     - Class: 114
-      Script: {instanceID: 12018}
+      Script: {instanceID: 11976}
     - Class: 114
-      Script: {instanceID: 12138}
+      Script: {instanceID: 12020}
     - Class: 114
-      Script: {instanceID: 12176}
+      Script: {instanceID: 12140}
     - Class: 114
-      Script: {instanceID: 12184}
+      Script: {instanceID: 12178}
     - Class: 114
-      Script: {instanceID: 12202}
+      Script: {instanceID: 12186}
     - Class: 114
-      Script: {instanceID: 12258}
+      Script: {instanceID: 12204}
     - Class: 114
-      Script: {instanceID: 84180}
+      Script: {instanceID: 12260}
+    - Class: 114
+      Script: {instanceID: 95008}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 122
@@ -347,7 +350,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 403aa300acd617dacb84eb05fb8a4228
+      Hash: d8d4ba8627f4045f129df9ff1c5ba10e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerHealthManager
@@ -629,7 +632,7 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: bec3e9172cb2ef91d9c4e28c334b826a
+      Hash: 42bd02265cefc299fad630491e2b70ce
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraController
@@ -665,7 +668,7 @@ ScriptsOnlyBuild:
     className: BulletController
   - hash:
       serializedVersion: 2
-      Hash: fece1d465b7d35049a02a8e0f0b459cb
+      Hash: 8614e71b9c4336c3f45f91c1768e3799
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShopRS
@@ -713,7 +716,7 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
-      Hash: 2269c616ce4959ba0c2ad5d68fbeba4a
+      Hash: 4dfb4afbe08aae9d26df7ffcdd2a0a27
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShopAS
@@ -729,6 +732,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RestartScript
   - hash:
       serializedVersion: 2
       Hash: 318c6c13a19c9fac98135ae14889de1b
@@ -965,7 +974,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: b94f66c6801bf6402f01409d51727eeb
+      Hash: bbfdb7906a0f23d389e39a0aab07a449
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShopMS
@@ -977,10 +986,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 4dfb4afbe08aae9d26df7ffcdd2a0a27
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: RestartScript
+    className: ShopHPMAX
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

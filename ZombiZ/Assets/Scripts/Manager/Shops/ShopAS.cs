@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShopAS : ShopManager
 {
+    public int levelMax = 5;
     int levelUpgrade = 1;
 
     private void Start()
@@ -13,7 +14,7 @@ public class ShopAS : ShopManager
 
     public override void shopping()
     {
-        if(levelUpgrade < 5)
+        if(levelUpgrade < levelMax)
         {
 
             client.GetComponent<PlayerController>().updateATKSpeed(0.9f);
@@ -22,7 +23,7 @@ public class ShopAS : ShopManager
             nomProduit = "ATTACK SPEED LEVEL " + levelUpgrade;
         }
         
-        if(levelUpgrade == 5)
+        if(levelUpgrade == levelMax)
         {
             price = 0;
             canBuy = false;

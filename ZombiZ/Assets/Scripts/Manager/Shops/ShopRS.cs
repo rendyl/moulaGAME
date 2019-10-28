@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShopRS : ShopManager
 {
+    public int levelMax = 5;
     int levelUpgrade = 1;
     public float rsMultiplier = 0.9f;
 
@@ -14,7 +15,7 @@ public class ShopRS : ShopManager
 
     public override void shopping()
     {
-        if (levelUpgrade < 5)
+        if (levelUpgrade < levelMax)
         { 
             client.GetComponent<PlayerController>().updateReloadSpeed(rsMultiplier);
             levelUpgrade++;
@@ -22,7 +23,7 @@ public class ShopRS : ShopManager
             nomProduit = "RELOADING SPEED LEVEL " + levelUpgrade;
         }
 
-        if (levelUpgrade == 5)
+        if (levelUpgrade == levelMax)
         {
             price = 0;
             canBuy = false;

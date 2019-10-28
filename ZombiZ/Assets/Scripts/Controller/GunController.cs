@@ -79,7 +79,7 @@ public class GunController : MonoBehaviour
             int nbBallesBurst = Mathf.Min(3, nbBallesInChargeur);
             for(int i = 0; i < nbBallesBurst; i++)
             {
-                BulletController newBullet = Instantiate(bullet, firePoint.position + firePoint.up*i/3, firePoint.rotation) as BulletController;
+                BulletController newBullet = Instantiate(bullet, firePoint.position + firePoint.up*i, firePoint.rotation) as BulletController;
                 newBullet.speed = bulletSpeed;
                 newBullet.type = "normal"; 
                 newBullet.dmg = bulletDMG;

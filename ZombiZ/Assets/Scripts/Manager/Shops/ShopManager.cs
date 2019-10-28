@@ -37,7 +37,7 @@ public class ShopManager : MonoBehaviour
             if(canBuy) textSHOP.SetText("F : ACHETER " + nomProduit + "\nPOUR " + price + "$");
             else textSHOP.SetText("CASSE TA MERE DE LA \nJ'AI PLUS RIEN A VENDRE");
 
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKey(KeyCode.F))
             {
                 if (cdActuel >= shopCD && canBuy)
                 {

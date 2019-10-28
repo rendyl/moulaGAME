@@ -17,6 +17,8 @@ public class PlayerHealthManager : MonoBehaviour
     public AudioSource dmgSound;
     public AudioSource deathSound;
 
+    public float timeRegenHP = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,16 @@ public class PlayerHealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(currentHealth > 0)
+        {
+            timeRegenHP -= Time.deltaTime;
+            if (timeRegenHP < 0)
+            {
+                timeRegenHP = 5f;
+                upHP(5);
+            }
+        }
+        
     }
 
     public void upHP(int health)

@@ -2,32 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShopMS : ShopManager
+public class ShopHPMAX : ShopManager
 {
-    public int levelMax = 5;
+    public int levelMax = 6;
     int levelUpgrade = 1;
-    public float msMultiplier = 1.05f;
-
     private void Start()
     {
-        nomProduit = "MOVE SPEED LEVEL " + levelUpgrade;
+        nomProduit = "HP MAX LEVEL " + levelUpgrade;
     }
 
     public override void shopping()
     {
         if (levelUpgrade < levelMax)
         {
-            client.GetComponent<PlayerController>().updateMoveSpeed(msMultiplier);
+            client.GetComponent<PlayerHealthManager>().maxHealth += 20;
             levelUpgrade++;
             price = price * levelUpgrade;
-            nomProduit = "MOVE SPEED LEVEL " + levelUpgrade;
+            nomProduit = "HP MAX LEVEL " + levelUpgrade;
         }
 
         if (levelUpgrade == levelMax)
         {
             price = 0;
             canBuy = false;
-            nomProduit = "MOVE SPEED LEVEL MAX";
+            nomProduit = "HP MAX LEVEL MAX";
         }
     }
 }
