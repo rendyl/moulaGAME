@@ -242,11 +242,11 @@ public class EnemyController : MonoBehaviour
 
             // Machine a etats :
 
-            if (playerInSight)
-            {
+            //if (playerInSight || boids.Count == 1)
+            //{
                 if (playerToChase.GetComponent<PlayerController>().isInvincible) moveAwayFromPlayer(3f);
                 else moveCloserToPlayer(1f);
-            }
+            //}
 
             moveAwayFromObstacles(obstacles, 3f, 0.5f);
 

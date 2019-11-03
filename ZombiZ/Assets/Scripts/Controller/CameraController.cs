@@ -29,6 +29,6 @@ public class CameraController : MonoBehaviour
             speed = baseSpeed * multiplier;
         }
         // transform.position = target.position + offset;
-        transform.position = Vector3.Lerp(transform.position, target.position + offset + new Vector3(Mathf.Clamp(Input.mousePosition.x, -960f, 960f) / diviseur, 0, Input.mousePosition.y / diviseur), speed * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, target.position + offset + new Vector3(Mathf.Clamp(Input.mousePosition.x, - Screen.width/2, Screen.width / 2) / diviseur, 0, Mathf.Clamp(Input.mousePosition.y, -Screen.height / 2, Screen.height / 2) / diviseur), speed * Time.deltaTime);
     }
 }
