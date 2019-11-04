@@ -25,6 +25,13 @@ public class BonusFactory : MonoBehaviour
         listBonus.Remove(go);
     }
 
+    public void spawnNukeAtPosition(Vector3 position)
+    {
+        GameObject bonus = Instantiate<GameObject>(bonusNUKEPrefab, position, Quaternion.identity);
+        bonus.transform.parent = gameObject.transform;
+        listBonus.Add(bonus);
+    }
+
     public void spawnBonusAtPosition(Vector3 position)
     {
         int dice = Random.Range(0, 101);
@@ -95,6 +102,7 @@ public class BonusFactory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if(Input.GetKeyDown(KeyCode.M))
         {
             GameObject bonus = Instantiate<GameObject>(bonusINVPrefab, new Vector3(0, 1, 0), Quaternion.identity);
@@ -108,6 +116,7 @@ public class BonusFactory : MonoBehaviour
             bonus.transform.parent = gameObject.transform;
             listBonus.Add(bonus);
         }
+        */
         // spawnBonusWithCD();   
     }
 }

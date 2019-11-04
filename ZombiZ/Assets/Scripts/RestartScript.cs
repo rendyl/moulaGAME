@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class RestartScript : MonoBehaviour
 {

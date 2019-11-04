@@ -7,6 +7,6 @@ public class Door : ShopManager
     public override void shopping()
     {
         textSHOP.SetText("");
-        Destroy(transform.parent.gameObject);
+        Destroy(transform.parent.gameObject.transform.parent.gameObject);
     }
 }
