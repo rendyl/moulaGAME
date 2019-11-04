@@ -32,7 +32,7 @@ public class PlayerHealthManager : MonoBehaviour
 
     void setHPText()
     {
-        hpText.text = "HP : " + currentHealth.ToString();
+        hpText.text = "HP : " + currentHealth.ToString() + "/" + maxHealth.ToString();
     }
 
     // Update is called once per frame

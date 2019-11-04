@@ -29,11 +29,15 @@ public class PlayerController : MonoBehaviour
     float timeBonusFR = 0;
     float timeMaxBonusFR = 0;
 
+    bool isPaused;
+
     private Rigidbody myRigidBody;
     public float kills;
     public float moulaga;
     public float score;
 
+    public TextMeshProUGUI enEspritTimer;
+    public TextMeshProUGUI pauseText;
     public TextMeshProUGUI magazineText;
     public TextMeshProUGUI weaponText;
     public TextMeshProUGUI scoreText;
@@ -63,8 +67,9 @@ public class PlayerController : MonoBehaviour
         particleINV.GetComponent<AudioSource>().pitch = 1f;
         particleINV.SetActive(false);
         particleINV.SetActive(true);
-        enEspritText.transform.position = new Vector3(160, 380f, 0);
+        enEspritText.transform.position = new Vector3(160, Screen.height/2, 0);
         enEspritText.SetText("EN ESPRIT");
+        enEspritTimer.SetText("EN ESPRIT : " + timeBonus);
         isInvincible = true;
         timeBonusINV = 0;
         timeMaxBonusINV = timeBonus;
@@ -111,7 +116,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        isPaused = false;
         myGun = gunList[indexActive];
         myGun.timeBetweenShots = myGun.baseTimeBetweenShots * attackSpeedMultiplier;
         myGun.reloadingTime = myGun.reloadingTime * reloadSpeedMultiplier;
@@ -121,6 +126,7 @@ public class PlayerController : MonoBehaviour
         enEspritText.SetText("");
         bonusMSText.SetText("");
         bonusASText.SetText("");
+        enEspritTimer.SetText("");
 
         moulaga = 0;
         kills = 0;
@@ -153,7 +159,6 @@ public class PlayerController : MonoBehaviour
         if(alive) myRigidBody.velocity = moveVelocity;
         else if (!rotated)
         {
-            
             myRigidBody.velocity = new Vector3(0, 0, 0); 
             rotated = true;
             transform.Rotate(0, 0, 90);
@@ -162,7 +167,12 @@ public class PlayerController : MonoBehaviour
 
     void checkBonusINV()
     {
-        if (timeBonusINV < timeMaxBonusINV) timeBonusINV += Time.deltaTime;
+        if (timeBonusINV < timeMaxBonusINV)
+        {
+            timeBonusINV += Time.deltaTime;
+            enEspritTimer.SetText("EN ESPRIT : " + Mathf.Round(timeMaxBonusINV - timeBonusINV));
+        }
+
         if (timeBonusINV > 0)
         {
             enEspritText.transform.position += 50 * timeBonusINV * new Vector3(1, 0, 0);
@@ -170,10 +180,12 @@ public class PlayerController : MonoBehaviour
         if (timeBonusINV > timeMaxBonusINV)
         {
             enEspritText.transform.position = new Vector3(-100, 0, 0);
+            enEspritTimer.SetText("");
             enEspritText.SetText("");
             particleINV.SetActive(false);
             isInvincible = false;
             timeBonusINV = 0;
+            timeMaxBonusINV = 0;
         }
     }
     
@@ -225,7 +237,7 @@ public class PlayerController : MonoBehaviour
         checkBonusMS();
         checkBonusINV();
 
-        if(alive)
+        if(alive && !isPaused)
         {
             if (myGun.actualReloading < myGun.reloadingTime) magazineText.SetText("RELOADING");
             else magazineText.SetText(myGun.nbBallesInChargeur + "/" + myGun.nbBallesTot);
@@ -285,7 +297,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            if (Input.GetKey(KeyCode.P))
+            if (Input.GetKey(KeyCode.J))
             {
                 moulaga += 1000;
             }
@@ -299,9 +311,30 @@ public class PlayerController : MonoBehaviour
                 myGun.setReload();
             }
         }
-        else
+        else if (!alive)
         {
             myRigidBody.velocity = new Vector3(0, 0, 0); 
+        }
+
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if(isPaused)
+            {
+                pauseText.gameObject.SetActive(false);
+                Time.timeScale = 1;
+                isPaused = false;
+            }
+            else
+            {
+                pauseText.gameObject.SetActive(true);
+                Time.timeScale = 0;
+                isPaused = true;
+            }
         }
     }
 }

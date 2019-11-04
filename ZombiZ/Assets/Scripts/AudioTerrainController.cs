@@ -27,6 +27,14 @@ public class AudioTerrainController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+            audioPlayerINV.mute = !audioPlayerINV.mute;
+            nukeSource.mute = !nukeSource.mute;
+            mySource.mute = !mySource.mute;
+            roundSource.mute = !roundSource.mute;
+        }
+
         if(roundSource.isPlaying && timeRound < 9f)
         {
             mySource.pitch = Mathf.Lerp(mySource.pitch, 1f, Time.deltaTime * 7);

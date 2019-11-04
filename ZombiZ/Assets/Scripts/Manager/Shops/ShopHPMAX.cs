@@ -15,7 +15,7 @@ public class ShopHPMAX : ShopManager
     {
         if (levelUpgrade < levelMax)
         {
-            client.GetComponent<PlayerHealthManager>().maxHealth += 20;
+            client.GetComponent<PlayerHealthManager>().maxHealth += 30;
             levelUpgrade++;
             price = price * levelUpgrade;
             nomProduit = "HP MAX LEVEL " + levelUpgrade;

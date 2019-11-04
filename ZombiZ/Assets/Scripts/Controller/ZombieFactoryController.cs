@@ -32,7 +32,7 @@ public class ZombieFactoryController : MonoBehaviour
     void Start()
     {
         GetComponent<AudioSource>().pitch = 1f;
-        GetComponent<AudioSource>().Play();
+        // GetComponent<AudioSource>().Play();
         textBeforeRound.SetText("");
         timerBeforeRound = 10f;
         round = 1;

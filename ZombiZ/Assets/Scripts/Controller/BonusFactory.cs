@@ -103,16 +103,16 @@ public class BonusFactory : MonoBehaviour
     void Update()
     {
         /*
-        if(Input.GetKeyDown(KeyCode.M))
+        if(Input.GetKeyDown(KeyCode.L))
         {
-            GameObject bonus = Instantiate<GameObject>(bonusINVPrefab, new Vector3(0, 1, 0), Quaternion.identity);
+            GameObject bonus = Instantiate<GameObject>(bonusINVPrefab, new Vector3(5, 1, 0), Quaternion.identity);
             bonus.transform.parent = gameObject.transform;
             listBonus.Add(bonus);
         }
 
         if (Input.GetKeyDown(KeyCode.O))
         {
-            GameObject bonus = Instantiate<GameObject>(bonusNUKEPrefab, new Vector3(0, 1, 0), Quaternion.identity);
+            GameObject bonus = Instantiate<GameObject>(bonusNUKEPrefab, new Vector3(5, 1, 0), Quaternion.identity);
             bonus.transform.parent = gameObject.transform;
             listBonus.Add(bonus);
         }

@@ -21,7 +21,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerInSight = false;
+        //playerInSight = false;
         myRigidBody = GetComponent<Rigidbody>();
         playerToChase = FindObjectOfType<PlayerController>();
         obsController = FindObjectOfType<ObstacleFactoryController>();
