@@ -26,7 +26,7 @@ public class EndDoor : Door
         isEnded = true;
     }
 
-    public void Update()
+    public void FixedUpdate()
     {
         if(isEnded)
         {

@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - CameraController
     - CameraPres
     - Door
+    - EndDoor
     - EnemyController
     - EnemyHealthManager
     - FieldOfView
@@ -145,61 +146,63 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11000}
     - Class: 114
-      Script: {instanceID: 11006}
+      Script: {instanceID: 11002}
     - Class: 114
-      Script: {instanceID: 11026}
+      Script: {instanceID: 11008}
     - Class: 114
-      Script: {instanceID: 11108}
+      Script: {instanceID: 11028}
     - Class: 114
-      Script: {instanceID: 11164}
+      Script: {instanceID: 11110}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11166}
     - Class: 114
-      Script: {instanceID: 11318}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11320}
     - Class: 114
-      Script: {instanceID: 11386}
+      Script: {instanceID: 11378}
     - Class: 114
-      Script: {instanceID: 11396}
+      Script: {instanceID: 11388}
     - Class: 114
       Script: {instanceID: 11398}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11400}
     - Class: 114
-      Script: {instanceID: 11506}
+      Script: {instanceID: 11420}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 11508}
     - Class: 114
-      Script: {instanceID: 11544}
+      Script: {instanceID: 11520}
     - Class: 114
-      Script: {instanceID: 11570}
+      Script: {instanceID: 11546}
     - Class: 114
-      Script: {instanceID: 11622}
+      Script: {instanceID: 11572}
     - Class: 114
-      Script: {instanceID: 11690}
+      Script: {instanceID: 11624}
     - Class: 114
-      Script: {instanceID: 11704}
+      Script: {instanceID: 11692}
     - Class: 114
-      Script: {instanceID: 11736}
+      Script: {instanceID: 11696}
     - Class: 114
-      Script: {instanceID: 11910}
+      Script: {instanceID: 11708}
     - Class: 114
-      Script: {instanceID: 11978}
+      Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 12022}
+      Script: {instanceID: 11914}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 11982}
     - Class: 114
-      Script: {instanceID: 12180}
+      Script: {instanceID: 12026}
     - Class: 114
-      Script: {instanceID: 12188}
+      Script: {instanceID: 12146}
     - Class: 114
-      Script: {instanceID: 12206}
+      Script: {instanceID: 12184}
     - Class: 114
-      Script: {instanceID: 12262}
+      Script: {instanceID: 12192}
     - Class: 114
-      Script: {instanceID: 38354}
+      Script: {instanceID: 12210}
+    - Class: 114
+      Script: {instanceID: 12266}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 122
@@ -611,6 +614,12 @@ ScriptsOnlyBuild:
     className: RotatingItem
   - hash:
       serializedVersion: 2
+      Hash: c96e07c2a4d7f9706cada62e88296908
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EndDoor
+  - hash:
+      serializedVersion: 2
       Hash: 4dfb4afbe08aae9d26df7ffcdd2a0a27
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -809,6 +818,12 @@ ScriptsOnlyBuild:
     className: PostProcessingProfile
   - hash:
       serializedVersion: 2
+      Hash: 2269c616ce4959ba0c2ad5d68fbeba4a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Door
+  - hash:
+      serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -993,12 +1008,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 2269c616ce4959ba0c2ad5d68fbeba4a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Door
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

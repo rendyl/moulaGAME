@@ -50,12 +50,21 @@ public class ZombieFactoryController : MonoBehaviour
     {
         if (nbZombiesGeneratedRound == 0) timerBeforeRound -= Time.deltaTime;
 
-        if (timerBeforeRound > 9f)
+        if (timerBeforeRound > 12f)
         {
+            textBeforeRound.SetText("ROUND OVER");
+        }
+        else if (timerBeforeRound > 9f)
+        {         
             textBeforeRound.SetText("ROUND " + round);
         }
         else if (timerBeforeRound > 0)
         {
+            if (!GetComponent<AudioSource>().isPlaying)
+            {
+                GetComponent<AudioSource>().pitch = 1f;
+                GetComponent<AudioSource>().Play();
+            }
             textBeforeRound.SetText(((int)timerBeforeRound).ToString());
         }    
 
@@ -89,9 +98,7 @@ public class ZombieFactoryController : MonoBehaviour
             {
                 if (listZombies.Count == 0)
                 {
-                    GetComponent<AudioSource>().pitch = 1f;
-                    GetComponent<AudioSource>().Play();
-                    timerBeforeRound = 10f;
+                    timerBeforeRound = 15f;
                     reloadTime -= 0.2f;
                     if (reloadTime < 0.5f) reloadTime = 0.5f;
                     round++;

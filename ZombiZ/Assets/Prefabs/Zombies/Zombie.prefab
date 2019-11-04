@@ -5000,6 +5000,7 @@ MonoBehaviour:
   killValue: 1
   currentHealth: 0
   playerToChase: {fileID: 0}
+  bonusInstantiator: {fileID: 0}
 --- !u!114 &2354020628158112061
 MonoBehaviour:
   m_ObjectHideFlags: 0

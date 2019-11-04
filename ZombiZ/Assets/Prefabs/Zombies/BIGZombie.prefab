@@ -4908,6 +4908,7 @@ MonoBehaviour:
   killValue: 2
   currentHealth: 0
   playerToChase: {fileID: 0}
+  bonusInstantiator: {fileID: 0}
 --- !u!114 &3466605465140512509
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -111,6 +111,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         myGun = gunList[indexActive];
         myGun.timeBetweenShots = myGun.baseTimeBetweenShots * attackSpeedMultiplier;
         myGun.reloadingTime = myGun.reloadingTime * reloadSpeedMultiplier;

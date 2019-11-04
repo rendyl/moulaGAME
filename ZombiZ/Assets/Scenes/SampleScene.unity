@@ -472,6 +472,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 674788043}
     m_Modifications:
+    - target: {fileID: 2363506427840297581, guid: 8be23188f141ce8499b65db313c79df4,
+        type: 3}
+      propertyPath: m_Name
+      value: Shop1
+      objectReference: {fileID: 0}
     - target: {fileID: 2363506427840297576, guid: 8be23188f141ce8499b65db313c79df4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -542,11 +547,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2363506427840297581, guid: 8be23188f141ce8499b65db313c79df4,
-        type: 3}
-      propertyPath: m_Name
-      value: Shop1
-      objectReference: {fileID: 0}
     - target: {fileID: 4439991081363939777, guid: 8be23188f141ce8499b65db313c79df4,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -606,6 +606,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363506427840297580, guid: 8be23188f141ce8499b65db313c79df4,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8be23188f141ce8499b65db313c79df4, type: 3}
@@ -751,7 +756,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -1670,7 +1675,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -2147,6 +2152,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 674788043}
     m_Modifications:
+    - target: {fileID: 2363506427840297581, guid: 8be23188f141ce8499b65db313c79df4,
+        type: 3}
+      propertyPath: m_Name
+      value: Shop2
+      objectReference: {fileID: 0}
     - target: {fileID: 2363506427840297576, guid: 8be23188f141ce8499b65db313c79df4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2217,16 +2227,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2363506427840297581, guid: 8be23188f141ce8499b65db313c79df4,
-        type: 3}
-      propertyPath: m_Name
-      value: Shop2
-      objectReference: {fileID: 0}
     - target: {fileID: 2363506427840297582, guid: 8be23188f141ce8499b65db313c79df4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ef97dc2e91fce87478cd1eac03dbb4f1, type: 2}
+    - target: {fileID: 2363506427840297580, guid: 8be23188f141ce8499b65db313c79df4,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8be23188f141ce8499b65db313c79df4, type: 3}
 --- !u!1 &185011596
@@ -2279,7 +2289,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -3019,7 +3029,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -3132,7 +3142,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -9329,8 +9339,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c448ee2c2f6bdcb4eaddb61fbee522f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10000
-  nomProduit: OUVRIR PORTE
+  price: 2500
+  nomProduit: OUVRIR PORTE MS
   client: {fileID: 1295262471}
   textSHOP: {fileID: 1505028987}
   shopCD: 1
@@ -10524,7 +10534,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -10899,8 +10909,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c448ee2c2f6bdcb4eaddb61fbee522f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10000
-  nomProduit: OUVRIR PORTE
+  price: 2500
+  nomProduit: OUVRIR PORTE RS
   client: {fileID: 1295262471}
   textSHOP: {fileID: 1505028987}
   shopCD: 1
@@ -11076,7 +11086,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -17593,7 +17603,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -18082,7 +18092,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -24745,6 +24755,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 674788043}
     m_Modifications:
+    - target: {fileID: 2363506427840297581, guid: 8be23188f141ce8499b65db313c79df4,
+        type: 3}
+      propertyPath: m_Name
+      value: Shop3
+      objectReference: {fileID: 0}
     - target: {fileID: 2363506427840297576, guid: 8be23188f141ce8499b65db313c79df4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24815,14 +24830,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2363506427840297581, guid: 8be23188f141ce8499b65db313c79df4,
-        type: 3}
-      propertyPath: m_Name
-      value: Shop3
-      objectReference: {fileID: 0}
     - target: {fileID: 2363506427840297583, guid: 8be23188f141ce8499b65db313c79df4,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363506427840297580, guid: 8be23188f141ce8499b65db313c79df4,
+        type: 3}
+      propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -26780,12 +26795,12 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 84c612d916c8bca4daefe5a309493586, type: 2}
-    - target: {fileID: 7684210008764578390, guid: 8ffaa3484901fe2459a434b51c885a73,
+    - target: {fileID: 7684210009158800111, guid: 8ffaa3484901fe2459a434b51c885a73,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 84c612d916c8bca4daefe5a309493586, type: 2}
-    - target: {fileID: 7684210009158800111, guid: 8ffaa3484901fe2459a434b51c885a73,
+    - target: {fileID: 7684210008764578390, guid: 8ffaa3484901fe2459a434b51c885a73,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -26824,7 +26839,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -34072,7 +34087,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -34203,7 +34218,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -34912,7 +34927,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -35810,8 +35825,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c448ee2c2f6bdcb4eaddb61fbee522f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10000
-  nomProduit: OUVRIR PORTE
+  price: 2500
+  nomProduit: OUVRIR PORTE AS
   client: {fileID: 1295262471}
   textSHOP: {fileID: 1505028987}
   shopCD: 1
@@ -35967,8 +35982,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c448ee2c2f6bdcb4eaddb61fbee522f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10000
-  nomProduit: OUVRIR PORTE
+  price: 2500
+  nomProduit: OUVRIR PORTE HPMAX
   client: {fileID: 1295262471}
   textSHOP: {fileID: 1505028987}
   shopCD: 1
@@ -36349,6 +36364,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 674788043}
     m_Modifications:
+    - target: {fileID: 2363506427840297581, guid: 8be23188f141ce8499b65db313c79df4,
+        type: 3}
+      propertyPath: m_Name
+      value: Shop1 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2363506427840297576, guid: 8be23188f141ce8499b65db313c79df4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -36419,11 +36439,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2363506427840297581, guid: 8be23188f141ce8499b65db313c79df4,
-        type: 3}
-      propertyPath: m_Name
-      value: Shop1 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 4439991081363939777, guid: 8be23188f141ce8499b65db313c79df4,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -36483,6 +36498,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363506427840297580, guid: 8be23188f141ce8499b65db313c79df4,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8be23188f141ce8499b65db313c79df4, type: 3}
@@ -47049,7 +47069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52320a083ba78f14b80d24d48de2155c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 200000
+  price: 100000
   nomProduit: END GAME
   client: {fileID: 1295262471}
   textSHOP: {fileID: 1505028987}
@@ -47778,7 +47798,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -47928,8 +47948,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884197432}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 5}
-  m_LocalScale: {x: 7, y: 1, z: 4}
+  m_LocalPosition: {x: 10, y: 0, z: 5.13}
+  m_LocalScale: {x: 7, y: 1, z: 3.9}
   m_Children: []
   m_Father: {fileID: 538724738}
   m_RootOrder: 6
@@ -49037,7 +49057,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -49654,7 +49674,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 3
@@ -51332,6 +51352,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1505242348}
     m_Modifications:
+    - target: {fileID: 6153720406290990698, guid: ca17f0a55a249194d950331a670cf742,
+        type: 3}
+      propertyPath: m_Name
+      value: HP
+      objectReference: {fileID: 0}
     - target: {fileID: 6153720406290990699, guid: ca17f0a55a249194d950331a670cf742,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -51386,11 +51411,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153720406290990698, guid: ca17f0a55a249194d950331a670cf742,
-        type: 3}
-      propertyPath: m_Name
-      value: HP
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca17f0a55a249194d950331a670cf742, type: 3}
