@@ -15,7 +15,7 @@ Gamagora 2019 - AI - moulaGAME (Boids / FSM)
 ## Fiche technique du jeu
 
 Le jeu se présente sous la forme d'un Top-Down Shooter :
-- Le joueur peut se orienter son personnage à l'aide de la Souris
+- Le joueur peut orienter son personnage à l'aide de la Souris
 - Il peut se déplacer à l'aide des flèches directionnelles du Clavier
 - Il peut tirer à l'aide du clic gauche de la Souris
 - Il peut aussi changer d'arme à l'aide de la molette de la Souris
