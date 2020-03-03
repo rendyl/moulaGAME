@@ -55,7 +55,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -174,35 +173,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11520}
     - Class: 114
-      Script: {instanceID: 11546}
+      Script: {instanceID: 11544}
     - Class: 114
-      Script: {instanceID: 11572}
+      Script: {instanceID: 11570}
     - Class: 114
-      Script: {instanceID: 11624}
+      Script: {instanceID: 11622}
     - Class: 114
-      Script: {instanceID: 11692}
+      Script: {instanceID: 11690}
     - Class: 114
-      Script: {instanceID: 11696}
+      Script: {instanceID: 11694}
     - Class: 114
-      Script: {instanceID: 11708}
+      Script: {instanceID: 11706}
     - Class: 114
-      Script: {instanceID: 11740}
+      Script: {instanceID: 11738}
     - Class: 114
-      Script: {instanceID: 11914}
+      Script: {instanceID: 11912}
     - Class: 114
-      Script: {instanceID: 11982}
+      Script: {instanceID: 11980}
     - Class: 114
-      Script: {instanceID: 12026}
+      Script: {instanceID: 12024}
     - Class: 114
-      Script: {instanceID: 12146}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12184}
+      Script: {instanceID: 12182}
     - Class: 114
-      Script: {instanceID: 12192}
+      Script: {instanceID: 12190}
     - Class: 114
-      Script: {instanceID: 12210}
+      Script: {instanceID: 12208}
     - Class: 114
-      Script: {instanceID: 12266}
+      Script: {instanceID: 12264}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 122

@@ -35,7 +35,7 @@ public class ShopManager : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             if(canBuy) textSHOP.SetText("F : ACHETER " + nomProduit + "\nPOUR " + price + "$");
-            else textSHOP.SetText("CASSE TA MERE DE LA \nJ'AI PLUS RIEN A VENDRE");
+            else textSHOP.SetText("PLUS RIEN A VENDRE");
 
             if (Input.GetKey(KeyCode.F))
             {
