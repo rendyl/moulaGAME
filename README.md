@@ -46,6 +46,7 @@ Il existe aussi différents bonus temporaires qui ont des chances d'apparaitre l
 - **BONUS BLANC : EN ESPRIT** : rend le joueur en esprit (GOD MODE) (les ennemis s'echappent en le voyant et il les tue au contact)
 
 Le joueur a aussi la possibilité d'acheter des atouts (bonus permanents), et de les améliorer :
+- **ATOUT VERT : VIE** : rend des points de vie au joueur
 - **ATOUT VERT : VIE** : augmente les points de vie maximums du joueur
 - **ATOUT JAUNE : MS** : augmente la vitesse de déplacement du joueur
 - **ATOUT ROUGE : AS** : augmente la vitesse d'attaque du joueur (cadence de tir)
