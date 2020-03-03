@@ -1013,4 +1013,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/TestZombiZ/ZombiZ.exe
+  playerPath: C:/Users/rlatb/Documents/Builds/ZombiZ.exe
