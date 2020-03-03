@@ -10,7 +10,7 @@ Gamagora 2019 - AI - moulaGAME (Boids / FSM)
 
 ## Illustration
 
-![Moulagame](Moulagame.png)
+![Moulagame](Capture.PNG)
 
 ## Fiche technique du jeu
 
