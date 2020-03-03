@@ -19,7 +19,8 @@ Le jeu se présente sous la forme d'un Top-Down Shooter :
 - Il peut se déplacer à l'aide des flèches directionnelles du Clavier
 - Il peut tirer à l'aide du clic gauche de la Souris
 - Il peut aussi changer d'arme à l'aide de la molette de la Souris
-- Il a la possibilité d'acheter des armes et buffs à l'aide de la touche E
+- Il a la possibilité d'acheter des armes et buffs à l'aide de la touche F
+- On peut mettre le jeu sur pause en appuyant sur P
 
 Le but du jeu est de survivre face à des vagues d'ennemis de plus en plus nombreux et de ne pas se laisser toucher. 
 Le joueur accumule du score (de la moulaga) en tirant sur des ennemis et en les tuant.
