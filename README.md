@@ -5,7 +5,7 @@ Gamagora 2019 - AI - moulaGAME (Boids / FSM)
 
 ***MOULAGAME...***
 
-*Le jeu met en scène la grosse Moula poursuivie par les méchants.*
+*Le jeu met en scène la grosse Moula poursuivie par les méchants.*<br>
 *Jeu inspiré de l'univers de la musique de Heuss l'enfoiré.*
 
 ## Illustration
@@ -28,27 +28,27 @@ Il peut aussi ouvrir des portes pour accéder à de nouvelles portions de la car
 Le joueur gagne la partie en ouvrant la porte de sortie et peut perdre en perdant l'intégralité de ses points de vie.
 
 Différentes armes sont disponibles dans le jeu : 
-- Lampe Torche : Ajoutée de base sur les armes du joueur, elle ralentit les ennemis éclairés
-- Thompson : Fusil d'Assaut, arme de base
-- SPAS-12 : Fusil à pompe semi-automatique
-- USAS-12 : Fusil à pompe automatique avec une grande cadence de tir
-- FAL : Fusil d'Assaut semi-automatique
-- FAMAS : Fusil d'Assaut semi-automatique à rafale
-- LMG : Mitrailleuse lourde avec une grande cadence de tir
-- BARRETT : Sniper à balles perforantes
+- **Lampe Torche** : Ajoutée de base sur les armes du joueur, elle ralentit les ennemis éclairés
+- **Thompson** : Fusil d'Assaut, arme de base
+- **SPAS-12** : Fusil à pompe semi-automatique
+- **USAS-12** : Fusil à pompe automatique avec une grande cadence de tir
+- **FAL** : Fusil d'Assaut semi-automatique
+- **FAMAS** : Fusil d'Assaut semi-automatique à rafale
+- **LMG** : Mitrailleuse lourde avec une grande cadence de tir
+- **BARRETT** : Sniper à balles perforantes
 
 Il existe aussi différents bonus temporaires qui ont des chances d'apparaitre lors de la mort d'un ennemi :
-- BONUS VERT : VIE : rend des points de vie au joueur
-- BONUS JAUNE : MS : augmente la vitesse de déplacement du joueur
-- BONUS ROUGE : AS : augmente la vitesse d'attaque du joueur (cadence de tir)
-- BONUS CYAN : NUKE : anéantit tous les ennemis présents sur la carte
-- BONUS BLANC : EN ESPRIT : rend le joueur en esprit (GOD MODE) (les ennemis s'echappent en le voyant et il les tue au contact)
+- **BONUS VERT : VIE** : rend des points de vie au joueur
+- **BONUS JAUNE : MS** : augmente la vitesse de déplacement du joueur
+- **BONUS ROUGE : AS** : augmente la vitesse d'attaque du joueur (cadence de tir)
+- **BONUS CYAN : NUKE** : anéantit tous les ennemis présents sur la carte
+- **BONUS BLANC : EN ESPRIT** : rend le joueur en esprit (GOD MODE) (les ennemis s'echappent en le voyant et il les tue au contact)
 
 Le joueur a aussi la possibilité d'acheter des atouts (bonus permanents), et de les améliorer :
-- ATOUT VERT : VIE : augmente les points de vie maximums du joueur
-- ATOUT JAUNE : MS : augmente la vitesse de déplacement du joueur
-- ATOUT ROUGE : AS : augmente la vitesse d'attaque du joueur (cadence de tir)
-- ATOUT BLEU : RS : augmente la vitesse de rechargement du joueur
+- **ATOUT VERT : VIE** : augmente les points de vie maximums du joueur
+- **ATOUT JAUNE : MS** : augmente la vitesse de déplacement du joueur
+- **ATOUT ROUGE : AS** : augmente la vitesse d'attaque du joueur (cadence de tir)
+- **ATOUT BLEU : RS** : augmente la vitesse de rechargement du joueur
 
 ## Objectif du Jeu : 
 
