@@ -47,7 +47,7 @@ Il existe aussi différents bonus temporaires qui ont des chances d'apparaitre l
 
 Le joueur a aussi la possibilité d'acheter des atouts (bonus permanents), et de les améliorer :
 - **ATOUT VERT : VIE** : rend des points de vie au joueur
-- **ATOUT VERT : VIE** : augmente les points de vie maximums du joueur
+- **ATOUT CYAN : VIE** : augmente les points de vie maximums du joueur
 - **ATOUT JAUNE : MS** : augmente la vitesse de déplacement du joueur
 - **ATOUT ROUGE : AS** : augmente la vitesse d'attaque du joueur (cadence de tir)
 - **ATOUT BLEU : RS** : augmente la vitesse de rechargement du joueur
