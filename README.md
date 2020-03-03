@@ -52,8 +52,8 @@ Le joueur a aussi la possibilité d'acheter des atouts (bonus permanents), et de
 
 ## Objectif du Jeu : 
 
-J'ai réalisé ce jeu seul.
-C'était ma première expérience sur Unity, il m'a permis de commencer à prendre en main le moteur de jeu.
+J'ai réalisé ce jeu seul.<br>
+C'était ma première expérience sur Unity, il m'a permis de commencer à prendre en main le moteur de jeu.<br>
 Les ennemis sont implémentés sous la forme de boids et disposent d'une machine à etat.
 
 ## Video Youtube :
