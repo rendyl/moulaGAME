@@ -59,5 +59,7 @@ C'était ma première expérience sur Unity, il m'a permis de commencer à prend
 Les ennemis sont implémentés sous la forme de boids et disposent d'une machine à etat.
 
 ## Video Youtube :
+https://www.youtube.com/watch?v=X6DLwzJ6X4M
 
 ## Lien pour télécharger le jeu :
+https://drive.google.com/open?id=1yqFsmnja_v_WdoQ0gsUnXWY71Y2maGdP
